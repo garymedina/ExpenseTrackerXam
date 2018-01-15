@@ -1,0 +1,45 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<MasterDetailPage xmlns="http://xamarin.com/schemas/2014/forms"
+                  xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+                  x:Class="ExpenseTrackerXam.View.EditExpenseView">
+    <MasterDetailPage.Master>
+        <ContentPage Title="Menu" BackgroundColor="#333333">
+            <StackLayout>
+                <Button Text="Something"></Button>
+            </StackLayout>
+            <StackLayout VerticalOptions="End">
+                <Button Text="Settings"/>
+                <Button Text="About"/>
+            </StackLayout>
+        </ContentPage>
+    </MasterDetailPage.Master>
+    <MasterDetailPage.Detail>
+        <ContentPage BackgroundColor="#333333">
+            <StackLayout BackgroundColor="#333333">
+                <Label Text="EXPENSE TRACKER" FontSize="20" TextColor="Orange" Margin="10,10,10,0" />
+                <Label Text="edit expense" FontSize="30" TextColor="DarkGray" Margin="10,-15,10,0"/>
+
+                <StackLayout Margin="30">
+                    <Label Text="Date"></Label>
+                    <DatePicker BackgroundColor="Black" TextColor="White" x:Name="ExpenseDate"/>
+
+                    <Label Text="Description"/>
+                    <Editor HeightRequest="150" BackgroundColor="Black" TextColor="White" x:Name="ExpenseDescription"/>
+
+                    <Label Text="Amount"/>
+                    <Entry BackgroundColor="Black" TextColor="White" Keyboard="Numeric" x:Name="ExpenseAmount"/>
+                    <Button Text="Save" Clicked="SaveBtn_OnClicked"/>
+                </StackLayout>
+
+            </StackLayout>
+        </ContentPage>
+    </MasterDetailPage.Detail>
+</MasterDetailPage>
+
+
+
+
+
+
+
+

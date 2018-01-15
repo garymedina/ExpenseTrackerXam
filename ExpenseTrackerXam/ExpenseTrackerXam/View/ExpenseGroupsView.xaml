@@ -1,0 +1,51 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<MasterDetailPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="ExpenseTrackerXam.View.ExpenseGroupsView">
+    <MasterDetailPage.Master>
+        <ContentPage Title="Menu" BackgroundColor="#333333">
+            <StackLayout BackgroundColor="#333333">
+                <StackLayout VerticalOptions="StartAndExpand">
+                    <Button Text="Add"></Button>
+           
+                </StackLayout>
+                <StackLayout VerticalOptions="End">
+                    <Button Text="Settings"></Button>
+                    <Button Text="About"></Button>
+                </StackLayout>
+            </StackLayout>
+        </ContentPage>
+    </MasterDetailPage.Master>
+    <MasterDetailPage.Detail>
+        <ContentPage BackgroundColor="#333333">
+            <StackLayout Margin="10,10,10,0" BackgroundColor="#333333">
+                <Label Text="EXPENSE TRACKER" FontSize="20" TextColor="Orange" Margin="10,10,10,0" />
+                <Label Text="expense groups" FontSize="30" TextColor="DarkGray" Margin="10,-15,10,0"/>
+
+                <ListView x:Name="GroupList" HasUnevenRows="True" BackgroundColor="#333333"
+                          ItemTapped="GroupList_OnItemTapped">
+                        <ListView.ItemTemplate>
+                            <DataTemplate>
+                                <ViewCell >
+                                <Frame OutlineColor="Orange" BackgroundColor="#333333">
+                                        <Grid>
+                                            <Grid.RowDefinitions>
+                                                <RowDefinition/>
+                                                <RowDefinition/>
+                                            </Grid.RowDefinitions>
+                                            <Label FontAttributes="Bold" FontSize="30" Text="{Binding Title}" Grid.Row="0" Margin="0,0,5,0" TextColor="#999999"/>
+                                            <Label FontAttributes="Bold" FontSize="20" Text="{Binding Description}" Grid.Row="1" Margin="0,-10,5,0" TextColor="#777777"/>
+                                        </Grid>
+                                    </Frame>
+                                </ViewCell>
+                            </DataTemplate>
+                        </ListView.ItemTemplate>
+                    </ListView>
+
+                </StackLayout>
+
+
+        </ContentPage>
+
+    </MasterDetailPage.Detail>
+</MasterDetailPage>

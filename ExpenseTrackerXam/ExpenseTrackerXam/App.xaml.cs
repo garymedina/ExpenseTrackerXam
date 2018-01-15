@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
-
+using ExpenseTrackerXam.View;
 using Xamarin.Forms;
 
 namespace ExpenseTrackerXam
@@ -13,7 +13,7 @@ namespace ExpenseTrackerXam
 		{
 			InitializeComponent();
 
-			MainPage = new ExpenseTrackerXam.MainPage();
+			MainPage = new ExpenseGroupsView();
 		}
 
 		protected override void OnStart ()
